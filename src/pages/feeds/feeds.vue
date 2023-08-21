@@ -2,9 +2,7 @@
     <div class="topline">
         <topline>
             <template #headline>
-                <div class="logo">
-                    <icon name="logo"/>
-                </div>
+                <icon name="logo"/>
                 <div class="icon">
                     <icon name="home"/>
                     <icon name="home"/>
@@ -35,9 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .logo {
-        color: black;
-    }
+
     .icon {
         color: black;
     }
