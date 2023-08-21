@@ -2,22 +2,46 @@
     <div class="topline">
         <topline>
             <template #headline>
-                <h1>Header</h1>
+                <div class="logo">
+                    <icon name="logo"/>
+                </div>
+                <div class="icon">
+                    <icon name="home"/>
+                    <icon name="home"/>
+                    <icon name="shape"/>
+                </div>
             </template>
         </topline>
 
-        <template #content>
-            <h2>Content</h2>
-        </template>
+        <topline>
+            <template #content>
+                <h2>Content</h2>
+            </template>
+        </topline>
+
     </div>
 </template>
 
 <script>
-    import { topline } from "../../components/topline"
-    export default {
-        name: "feeds",
-        components: {
-            topline
-        }
-    }
+import { topline } from '../../components/topline'
+import { icon } from '../../icons'
+export default {
+  name: 'feeds',
+  components: {
+    topline,
+    icon
+  }
+}
 </script>
+
+<style lang="scss" scoped>
+    .logo {
+        color: black;
+    }
+    .icon {
+        color: black;
+    }
+    .icon:hover {
+        color: greenyellow;
+    }
+</style>
