@@ -30,12 +30,16 @@
             </template>
         </topline>
 
+        <mainContent>
+
+        </mainContent>
     </div>
 </template>
 
 <script>
 import { topline } from '../../components/topline'
 import { storyUserItem } from '../../components/storyUserItem'
+import { mainContent } from '../../components/mainContent'
 import stories from './data.json'
 import { icon } from '../../icons'
 export default {
@@ -43,6 +47,7 @@ export default {
   components: {
     topline,
     storyUserItem,
+    mainContent,
     icon
   },
   data () {
@@ -58,6 +63,10 @@ export default {
         color: #000;
         width: 174px;
         height: 40px;
+        &:hover {
+            cursor: pointer;
+            color: #31AE54;
+        }
     }
     .icon {
         display: flex;
@@ -77,5 +86,10 @@ export default {
         &__link:hover {
             color: #31AE54;
         }
+    }
+
+    .stories {
+        display: flex;
+        justify-content: space-between;
     }
 </style>

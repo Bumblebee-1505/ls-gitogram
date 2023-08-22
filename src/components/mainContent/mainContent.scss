@@ -1,0 +1,23 @@
+.main__content_block {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 25px 0;
+
+    .main__content_topline {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+
+        .main-img {
+            width: 45px;
+            margin-right: 15px;
+        }
+
+        .main-title {
+            color: #262626;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+}
+
