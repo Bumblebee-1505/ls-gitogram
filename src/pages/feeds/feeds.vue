@@ -31,7 +31,7 @@
         </topline>
 
         <mainContent>
-
+            <mainContentSlot></mainContentSlot>
         </mainContent>
     </div>
 </template>
@@ -40,6 +40,7 @@
 import { topline } from '../../components/topline'
 import { storyUserItem } from '../../components/storyUserItem'
 import { mainContent } from '../../components/mainContent'
+import { mainContentSlot } from '../../components/mainContentSlot'
 import stories from './data.json'
 import { icon } from '../../icons'
 export default {
@@ -48,6 +49,7 @@ export default {
     topline,
     storyUserItem,
     mainContent,
+    mainContentSlot,
     icon
   },
   data () {
