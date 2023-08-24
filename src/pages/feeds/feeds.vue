@@ -51,7 +51,7 @@
                     <div class="comments" v-if="shown">
                         <ul class="comments__list">
                             <li class="comments-item" v-for="n in 5" :key="n">
-                                <comment text="some text" username="John Doe"/>
+                                <comments text="some text" username="John Doe"/>
                             </li>
                         </ul>
                     </div>
@@ -66,7 +66,7 @@ import { topline } from '../../components/topline'
 import { storyUserItem } from '../../components/storyUserItem'
 import { mainContent } from '../../components/mainContent'
 import { toggler } from '../../components/toggler'
-// import { comments } from '../../components/comments'
+import { comments } from '../../components/comments'
 import stories from './data.json'
 import { icon } from '../../icons'
 // import { template } from '@babel/core'
@@ -77,7 +77,7 @@ export default {
     storyUserItem,
     mainContent,
     toggler,
-    // comments,
+    comments,
     icon
     // template
   },
