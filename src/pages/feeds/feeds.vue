@@ -26,39 +26,46 @@
                 </ul>
             </template>
         </topline>
+    </div>
 
-        <mainContent>
+    <mainContent>
             <template #mainContentSlot>
                 <div class="main__slot_description">
                     <h2 class="main__slot-title">Vue.js</h2>
                     <h3 class="main__slot-subtitle">JavaScript framework for building interactive web applications ⚡</h3>
 
                     <div class="main__slot_info">
-                        <div class="main__info_star">
-                            <a href="#" class="main__info_link">
+                        <button class="main__info_link">
+                            <div class="main__icon">
                                 <icon name="star" />
-                            </a>
-                            <p class="main__info-text">156K</p>
-                        </div>
+                            </div>
+                            Star
+                        </button>
+                        <p class="main__info-text">156K</p>
 
-                        <div class="main__info_fork"></div>
+                        <button class="main__info_link">
+                            <div class="main__icon">
+                                <icon name="fork" />
+                            </div>
+                            Fork
+                        </button>
+                        <p class="main__info-text">4</p>
                     </div>
                 </div>
             </template>
-            <template>
+            <template #mainContentComments>
                 <div class="c-feed">
-                    <toggler @onToggle="toggle"/>
+                    <toggler @onToggle="toggle" />
                     <div class="comments" v-if="shown">
                         <ul class="comments__list">
                             <li class="comments-item" v-for="n in 5" :key="n">
-                                <comments text="some text" username="John Doe"/>
+                                <comments text="some text" username="John Doe" />
                             </li>
                         </ul>
                     </div>
                 </div>
             </template>
         </mainContent>
-    </div>
 </template>
 
 <script>
@@ -132,9 +139,34 @@ export default {
     justify-content: space-between;
 }
 
-.main__info_link {
-    width: 20px;
-    height: 20px;
-    color: #000;
+.main__slot-title {
+    color: #292929;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.main__slot-subtitle {
+    color: #404040;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.main__slot_info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+
+    .main__info_link .main__info-text{
+        box-shadow: 0px 1px 0px 0px rgba(27, 31, 35, 0.04);
+        border-radius: 6px 0px 0px 6px;
+        background: #FAFBFC;
+        box-shadow: 0px 1px 0px 0px rgba(27, 31, 35, 0.04), 0px 2px 0px 0px rgba(255, 255, 255, 0.02) inset;
+    }
+}
+.c-feed {
+    margin-bottom: 10px;
 }
 </style>

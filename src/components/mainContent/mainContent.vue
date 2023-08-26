@@ -10,6 +10,9 @@
                     <slot name="mainContentSlot" />
                 </div>
 
+                <div class="main__content_comments" v-if="$slots.mainContentComments">
+                    <slot name="mainContentComments" />
+                </div>
                 <div class="main__date">15 MAY</div>
             </div>
         </div>

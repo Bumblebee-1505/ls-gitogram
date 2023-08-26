@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'Comment',
+  name: 'Comments',
   props: {
     username: {
       type: String,
@@ -24,3 +24,5 @@ export default {
   }
 }
 </script>
+
+<style src="./comments.scss" lang="scss" scoped></style>
