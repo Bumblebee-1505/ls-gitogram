@@ -1,0 +1,23 @@
+.slide__container {
+    max-width: 375px;
+    margin: 0 auto;
+    border-radius: 8px;
+    
+    .slider__item_description {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-right: 18px;
+
+        .slider__item-text {
+            color: var #404040;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 160%;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+}

@@ -1,3 +1,11 @@
+:root {
+    --z-activ-slide: 10;
+    --grey: #404040;
+    --green: #31AE54;
+    --borders: #D3D3D3;
+    --lightGray: #9E9E9E;
+}
+
 body, html {
     height: 100%;
 }
@@ -26,7 +34,7 @@ ul {
 
 img {
     display: block;
-    // min-width: 100%;
+    // max-width: 100%;
 }
 
 p {

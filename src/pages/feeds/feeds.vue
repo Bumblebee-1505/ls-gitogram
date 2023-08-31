@@ -29,43 +29,43 @@
     </div>
 
     <mainContent>
-            <template #mainContentSlot>
-                <div class="main__slot_description">
-                    <h2 class="main__slot-title">Vue.js</h2>
-                    <h3 class="main__slot-subtitle">JavaScript framework for building interactive web applications ⚡</h3>
+        <template #mainContentSlot>
+            <div class="main__slot_description">
+                <h2 class="main__slot-title">Vue.js</h2>
+                <h3 class="main__slot-subtitle">JavaScript framework for building interactive web applications ⚡</h3>
 
-                    <div class="main__slot_info">
-                        <button class="main__info_link">
-                            <div class="main__icon">
-                                <icon name="star" />
-                            </div>
-                            Star
-                        </button>
-                        <p class="main__info-text">156K</p>
+                <div class="main__slot_info">
+                    <button class="main__info_link">
+                        <div class="main__icon">
+                            <icon name="star" />
+                        </div>
+                        Star
+                    </button>
+                    <p class="main__info-text">156K</p>
 
-                        <button class="main__info_link">
-                            <div class="main__icon">
-                                <icon name="fork" />
-                            </div>
-                            Fork
-                        </button>
-                        <p class="main__info-text">4</p>
-                    </div>
+                    <button class="main__info_link">
+                        <div class="main__icon">
+                            <icon name="fork" />
+                        </div>
+                        Fork
+                    </button>
+                    <p class="main__info-text">4</p>
                 </div>
-            </template>
-            <template #mainContentComments>
-                <div class="c-feed">
-                    <toggler @onToggle="toggle" />
-                    <div class="comments" v-if="shown">
-                        <ul class="comments__list">
-                            <li class="comments-item" v-for="n in 5" :key="n">
-                                <comments text="some text" username="John Doe" />
-                            </li>
-                        </ul>
-                    </div>
+            </div>
+        </template>
+        <template #mainContentComments>
+            <div class="c-feed">
+                <toggler @onToggle="toggle" />
+                <div class="comments" v-if="shown">
+                    <ul class="comments__list">
+                        <li class="comments-item" v-for="n in 5" :key="n">
+                            <comments text="some text" username="John Doe" />
+                        </li>
+                    </ul>
                 </div>
-            </template>
-        </mainContent>
+            </div>
+        </template>
+    </mainContent>
 </template>
 
 <script>
