@@ -1,0 +1,51 @@
+.c-person{
+    display: flex;
+    align-items: center;
+
+    .profile-link {
+        margin-right: 0.875rem;
+        display: flex;
+        align-items: center;
+
+        &__avatar {
+            display: inline-block;
+            // width: 2.75rem;
+            // height: 2.75rem;
+            border-radius: 50%;
+        }
+    }
+
+    .person-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__username {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .connections {
+            font-size: 12px;
+
+            &__link {
+                color:rgba(49, 174, 84, 1);
+
+            }
+
+            &__number {
+                font-size: 14px;
+                font-weight: bold;
+            }
+
+            &__number:nth-child(2) {
+                margin-left: 0.375rem;
+            }
+        }
+
+        &__realName {
+            font-size: 14px;
+            color: rgba(158, 158, 158, 1)
+        }
+    }
+}
