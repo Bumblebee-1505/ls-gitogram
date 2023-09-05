@@ -46,6 +46,7 @@ import { feed } from '../../components/feed'
 import { logo } from '../../components/logo'
 import { menu } from '../../components/menu'
 import { repository } from '../../components/repository'
+import { storiesSlider } from '../../components/storiesSlider'
 import * as api from '../../api'
 
 export default {
@@ -56,7 +57,8 @@ export default {
     storyUserItem,
     feed,
     logo,
-    repository
+    repository,
+    storiesSlider
   },
   data () {
     return {
@@ -68,12 +70,10 @@ export default {
     try {
       const { data } = await api.trendings.getTrendings()
       this.items = data.items
-      // console.log(this.items)
     } catch (error) {
       console.log(error)
     }
 
-    console.log(this.$store.state.foo)
   }
 }
 </script>
