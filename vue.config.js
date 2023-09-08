@@ -4,5 +4,5 @@ module.exports = defineConfig({
 })
 
 module.exports = {
-  publicPath: '/ls-gitogram/dist'
+  publicPath: '/ls-gitogram/dist/#'
 }
