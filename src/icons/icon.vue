@@ -1,5 +1,5 @@
 <template>
-    <component :is="name"/>
+  <component :is="name" />
 </template>
 
 <script>
@@ -7,9 +7,7 @@ import * as icons from './variants'
 
 export default {
   name: 'Icon',
-  components: {
-    ...icons
-  },
+  components: { ...icons },
   props: {
     name: {
       type: String,

@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  svg {
+    width: 175px;
+    height: 37px;
+    color: #292929;
+    transition: color .5s;
+
+    &:hover {
+      color: #645353;
+      transition: color .5s;
+    }
+  }
+}

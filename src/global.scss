@@ -1,68 +1,43 @@
-:root {
-    --z-activ-slide: 10;
-    --grey: #404040;
-    --green: #31AE54;
-    --borders: #D3D3D3;
-    --lightGray: #9E9E9E;
+// @import "~reseter.css/src/scss/minireseter";
+
+a {
+  text-decoration: none;
+  color: black;
+
+  &:active {
+    color: black;
+  }
 }
 
-body, html {
-    height: 100%;
+html, body {
+  font-family: 'Inter', sans-serif;
 }
 
-body {
-    font-family: 'Inter', Helvetica, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #262626;
-    font-size: 14px;
-    line-height: 1.8;
-
-}
-
-@for $i from 1 through 6 {
-    h#{$i} {
-        margin: 0;
-    }
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-img {
-    display: block;
-    // max-width: 100%;
-}
-
-p {
-    margin: 0;
-}
-
-svg {
-    display: block;
-}
-
-button {
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    padding: 0;
-}
-
-*, *:after, *:before {
-    box-sizing: border-box;
+#app {
 }
 
 .wrapper {
-    overflow: hidden;
-    min-height: 100%;
-    position: relative;
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
 }
 
 .x-container {
-    width: 1200px;
-    margin: 0 auto;
+  width: 1200px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.d-none {
+  display: none;
+}
+
+.w-504 {
+  width: 504px;
 }

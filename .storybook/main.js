@@ -6,6 +6,17 @@ const config = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
+  webpackFinal: config => {
+    config.module.rules.push({
+      test: /.scss$/i,
+      use: [
+        "style-loader",
+        "css-loader",
+        "sass-loader"
+      ]
+    })
+    return config;
+  },
   framework: {
     name: "@storybook/vue3-webpack5",
     options: {},
@@ -14,15 +25,4 @@ const config = {
     autodocs: "tag",
   },
 };
-webpackFinal: config => {
-  config.module.rules.push({
-    test: /.scss$/i,
-    use: [
-      "style-loader",
-      "css-loader",
-      "sass-loader"
-    ]
-  })
-  return config;
-}
 export default config;

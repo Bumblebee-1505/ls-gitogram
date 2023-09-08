@@ -1,0 +1,25 @@
+<li class="post">
+    <div class="post__author">
+        <img :src="postImg" alt="avatar" class="post__img">
+        <h3 class="post__nickname">{{username}}</h3>
+    </div>
+
+    <framework
+            :title="frameworkName"
+            :span="frameworkSpan"
+            :desc="frameworkDesc"
+            :stars="stars"
+            :forks="forks"
+            @change="onChange"
+    />
+
+    <issues
+            v-if="issuesNum > 0"
+            :num="issuesNum"
+            :issue="issue"
+            :framework-name="frameworkName"
+            :issue-username="123"
+    />
+
+    <time class="post__date">{{numMonth}} {{month}}</time>
+</li>

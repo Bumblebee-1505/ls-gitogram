@@ -1,0 +1,25 @@
+<div class="framework">
+    <h2 class="framework__name">{{title}}</h2>
+    <div class="framework__desc"><span>{{span}}</span> {{desc}}</div>
+
+    <div class="utils">
+        <div class="util star">
+            <a href="#" class="util__name" @click.prevent="$emit('change', 'star')">
+                <div class="util__icon">
+                    <icon name="fork" />
+                </div>
+                <div class="util__title">Star</div>
+            </a>
+            <div class="util__num">{{stars}}</div>
+        </div>
+        <div class="util fork">
+            <a href="#" class="util__name" @click.prevent="$emit('change', 'fork')">
+                <div class="util__icon">
+                    <icon name="fork" />
+                </div>
+                <div class="util__title">Fork</div>
+            </a>
+            <div class="util__num">{{forks}}</div>
+        </div>
+    </div>
+</div>

@@ -1,15 +1,18 @@
 <template>
-    <button class="c-button">
-        <slot></slot>
-    </button>
+  <a href="#" class="button" @click.prevent>
+    <span>{{defaultText}}</span>
+    <span>{{hoverText}}</span>
+  </a>
 </template>
 
 <script>
 export default {
-  name: 'button',
+  name: 'xButton',
   props: {
+    defaultText: String,
+    hoverText: String
   }
 }
 </script>
 
-<style scoped lang="scss" src="./button.scss"></style>
+<style lang="scss" src="./style.scss" scoped/>

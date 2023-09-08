@@ -1,6 +1,6 @@
 import { makeRequest } from '../requests'
 
-const addStartingZero = (value) => value < 10 ? `0${value}` : value
+const addStaringZero = value => value < 10 ? `0${value}` : value
 
 export const getTrendings = (lang = 'javascript') => {
   const params = new URLSearchParams()
@@ -9,16 +9,34 @@ export const getTrendings = (lang = 'javascript') => {
 
   const formattedDate = [
     weekAgo.getFullYear(),
-    addStartingZero(weekAgo.getMonth() + 1),
-    addStartingZero(weekAgo.getDate())
+    addStaringZero(weekAgo.getMonth() + 1),
+    addStaringZero(weekAgo.getDate())
   ].join('-')
 
   params.append('order', 'desc')
   params.append('sort', 'stars')
-  params.append('per_page', 10)
+  params.append('per_page', '10')
   params.append('q', `language:${lang} created:>${formattedDate}`)
 
   return makeRequest({
     url: `/search/repositories?${params}`
+  })
+}
+
+// https://api.github.com/repos/bradtraversy/website-accessibility-tester/issues
+
+export const getIssues = (url) => {
+  return makeRequest({
+    url: `${url}`
+  })
+}
+
+export const getReadme = ({ owner, repo }) => {
+  const contentHeader = 'application/vnd.github.v3.html+json'
+  return makeRequest({
+    url: `/repos/${owner}/${repo}/readme`,
+    headers: {
+      accept: contentHeader
+    }
   })
 }

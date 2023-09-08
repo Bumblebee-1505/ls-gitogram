@@ -1,27 +1,20 @@
-<template>
-    <div class="c-menu">
-        <router-link class="home-icon" to="/">
-            <icon name="home" />
-        </router-link>
-        <router-link class="profile-icon" to="/user">
-            <img src="https://picsum.photos/300/300" alt="Profile" class="profile-icon__image">
-        </router-link>
-        <a class="signOut-icon" href="#">
-            <icon name="signOut" />
-        </a>
-
-    </div>
-</template>
+<template src="./template.html" />
 
 <script>
-import { icon } from '../../icons'
+
+import icon from '../../icons/icon'
 
 export default {
-  name: 'menu',
+  name: 'top-menu',
   components: {
     icon
+  },
+  methods: {
+    logoClick () {
+      this.$emit('change', 'logo click')
+    }
   }
 }
 </script>
 
-<style scoped lang="scss" src="./menu.scss" ></style>
+<style lang="scss" src="./style.scss" scoped />
